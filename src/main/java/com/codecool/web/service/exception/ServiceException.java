@@ -1,4 +1,12 @@
-package com.codecool.web.service.simple;
+package com.codecool.web.service.exception;
 
-public class ServiceException {
+public class ServiceException extends Exception {
+
+    public ServiceException() {
+        super();
+    }
+
+    public ServiceException(String message) {
+        super(message);
+    }
 }
