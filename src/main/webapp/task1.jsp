@@ -9,6 +9,10 @@
 </head>
 <body>
     <h1>Task1</h1>
+    <form action="task1" method="GET">
+        Company name:<input type="text" name="companyName"><br>
+        <input type="submit" value="Search">
+    </form>
     <table>
         <thead>
         <tr>
@@ -25,5 +29,8 @@
             </c:forEach>
         </tbody>
     </table>
+    <c:if test="${not empty error}">
+        <p style="color: red;"><c:out value="${error}"/></p>
+    </c:if>
 </body>
 </html>
